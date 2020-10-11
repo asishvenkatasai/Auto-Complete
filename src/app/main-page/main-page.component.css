@@ -1,0 +1,46 @@
+#search_box{
+ margin-top:7%;
+}
+#search_bar{
+    color: rgb(103, 105, 78);
+    height: 40px;
+    border-radius: 0.1cm;
+    font-size: 20px;
+}
+#search_button{
+    border-color:rgb(94, 97, 59);
+    border-radius: 0.15cm;
+    font-size: 20px;
+}
+#search_image{
+    max-width: 1000px;
+    max-height:300px;
+}
+#icon{
+    margin-left: 2%;
+    color: rgb(240, 151, 18);
+}
+#first_line{
+    margin-left:1%;
+    color:rgb(3, 83, 148);
+    font-size:18px;
+    margin-top:1%;
+}
+#heading{
+    color:brown;
+    font-size:20px;
+}
+#second_line{
+    color: rgb(3, 119, 172);
+    font-size:14px;
+    margin-left: 5.5%;
+}
+#card{
+    border-radius: 3%;
+    margin-top: 1%;
+    cursor: pointer;
+    max-height:58px;
+}
+.card:hover{
+    background-color: rgb(52, 253, 45);
+}

@@ -1,0 +1,65 @@
+<div class="container-fluid ">
+    <div class="search_box " id="search_box">
+        <div class="row">
+            <input class="serach_bar offset-1 col-7" id="search_bar" [(ngModel)]="searchPlace" type="text"
+                placeholder="Search city or college" (keyup)="fun();">
+            <input class="bg-warning col-2" id="search_button" type="button" value="Search">
+        </div>
+        <div id="suggestion_box " class="row">
+            <div class="offset-1 col-9" style="background-color: white;">
+                <div *ngIf="basicSuggestion; else templateName" class="">
+                    <br>
+                    <div class="" id="heading">
+                        Popular Cities
+                    </div>
+                    <div class="pouplar_cities" id="pouplar_cities">
+                        <div *ngFor="let i of popularCities;">
+                            <div class="card" id="card">
+                                <div class="row">
+                                    <span class="material-icons align-self-center" id="icon">location_city</span>
+                                    <h4 class="align-self-center" id="first_line">{{i.name}}</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="" id="heading">
+                        Popular Colleges
+                    </div>
+                    <div class="pouplar_colleges" id="pouplar_college">
+                        <div *ngFor="let i of popularColleges;">
+                            <div class="card" id="card">
+                                <div class="row">
+                                    <span class="material-icons align-self-center" id="icon">school</span>
+                                    <h4 class="align-self-center" id="first_line">{{i.name}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <ng-template #templateName>
+                    <div class="optimal_suggestions">
+                        <div *ngFor="let i of newSearchPlaces;">
+                            <div class="card" id="card">
+                                <div class="row">
+                                    <span class="material-icons align-self-center" id="icon">place</span>
+                                    <h4 class="align-self-center" id="first_line">{{i.name}}</h4>
+                                </div>
+                                <div class="row" >
+                                    <h4 class="align-self-center" id="second_line">{{i.secondary_name}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div *ngIf=noResult class="row ">
+                        <img src="../../assets/nosearch1.jpg" class="img-fluid mx-auto" id="search_image">
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+    </div>
+</div>
